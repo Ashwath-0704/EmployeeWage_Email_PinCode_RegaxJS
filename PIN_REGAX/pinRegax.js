@@ -1,14 +1,9 @@
-/**
- * @author Ashwath Naidu <ashwath.bly@gmail.com>
- * @version v16.13.2
- * @purpose -> Email validation with REGAX 
- */
-
 const PIN_REGAX_TYPE_1 = /[0-9]{1}[0-9]{2}[\s]?[0-9]{2}[0-9]{1}$/;
 const PIN_REGAX_TYPE_2 = /[0-9]{1}$[0-9]{2}[\s]?[0-9]{2}[0-9]{1}$/;
 
 /**
  * @purpose -> UC1 : Create a regex pattern to validate PIN code 400088.
+ *          -> UC4 : Make sure 400 088 is also valid along with 400088.
  * @param {*} pinCode 
  * @returns 
  */
@@ -29,6 +24,5 @@ function pinValidationType2(pinCode) {
 
 let pinCodeArrayType1 = new Array(400088, "400 088");
 let pinCodeArrayType2 = new Array("A400088", "400088B");
-
 console.log(pinValidationType1(pinCodeArrayType1)); // [ true, true ]
 console.log(pinValidationType2(pinCodeArrayType2)); // [ false, false ]

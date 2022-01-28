@@ -19,6 +19,8 @@ function emailValidationType1(emailId) {
 
 /**
  * @purpose -> Ensure “.” after bridgelabz and validate the mandatory 3rd part i.e. co
+ *          -> Lets handle optional part i.e. xyz in abc.xyz@bridgelabz.co.in 
+ *          -> NOTE: make sure only following are valid special characters _,+,-,. proceeding to xyz
  * @param {*} emailId 
  * @returns 
  */
