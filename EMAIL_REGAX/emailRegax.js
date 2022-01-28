@@ -10,6 +10,7 @@ const EMAIL_REGAX_TYPE_2 = /^[A-Za-z0-9.+-_]*[a-zA-Z0-9]+[@][b][r][i][d][g][e][l
  * @purpose -> Validate Email address with a regex. The email consists of minimum 3 and optional 2 more parts with mandatory @ and .
  *          -> Ensure @ and validate the mandatory 2nd part i.e. bridgelabz
  * @param {*} emailId 
+ * @returns -> It returns the ture if email id is accepts or false
  */
 
 
@@ -21,8 +22,10 @@ function emailValidationType1(emailId) {
  * @purpose -> Ensure “.” after bridgelabz and validate the mandatory 3rd part i.e. co
  *          -> Lets handle optional part i.e. xyz in abc.xyz@bridgelabz.co.in 
  *          -> NOTE: make sure only following are valid special characters _,+,-,. proceeding to xyz
+ *          -> Finally lets close the expression with supporting optional parts.
+            -> Note: Top Level Domains (TLD) in the last part is the optional country code and its 2 characters only
  * @param {*} emailId 
- * @returns 
+ * @returns  -> It returns the ture if email id is accepts or false
  */
 function emailValidationType2(emailId) {
     return emailId.map(element => (EMAIL_REGAX_TYPE_2.test(element) == true));
