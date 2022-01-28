@@ -54,6 +54,7 @@ function calculateTotalWage(Array, arr, arrNew) {
     let dailyWage = [];
     let dailywagePartTime = [];
     let dailywagelose = [];
+
     Array.forEach((element => { if ((element != -Infinity) == true) return dailyWage.push(1 * RATE * Fixed_hrs) }));
     Array.forEach((element => { if ((element != -Infinity) == true) return dailywagePartTime.push(1 * RATE * Part_Time_Fixed_hrs) }));
     Array.forEach((element => { if ((element != -Infinity) == true) return dailywagelose.push(1 * RATE * Fixed_hrs) }));
