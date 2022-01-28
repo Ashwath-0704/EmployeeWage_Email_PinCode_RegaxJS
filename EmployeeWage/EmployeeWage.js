@@ -54,13 +54,10 @@ function calculateTotalWage(Array, arr, arrNew) {
     let dailyWage = [];
     let dailywagePartTime = [];
     let dailywagelose = [];
-
     Array.forEach((element => { if ((element != -Infinity) == true) return dailyWage.push(1 * RATE * Fixed_hrs) }));
     Array.forEach((element => { if ((element != -Infinity) == true) return dailywagePartTime.push(1 * RATE * Part_Time_Fixed_hrs) }));
     Array.forEach((element => { if ((element != -Infinity) == true) return dailywagelose.push(1 * RATE * Fixed_hrs) }));
-
     console.log("\nPresent days are -> [" + Array + "]\nDaily Wage -> (" + dailyWage + ")\nTotal Wage -> ( ₹ " + totalWageForPresentDays + " )\n\nPartTime day -> [" + arrNew + "]\nPartTime Daily Wage -> (" + dailywagePartTime + ")\nPartTime Total Wage -> ( ₹ " + totalWageForPartTimeDays + " )" + "\n\nAbsent days ->  [" + arr + "] \nDaily Wage lose -> ( " + dailywagelose + " )\nTotal wage lose -> ( ₹ " + totalWageForAbsentDays + " )\n");
-
     return [
         [Array, dailyWage, totalWageForPresentDays],
         [arrNew, dailywagePartTime, totalWageForPartTimeDays],
