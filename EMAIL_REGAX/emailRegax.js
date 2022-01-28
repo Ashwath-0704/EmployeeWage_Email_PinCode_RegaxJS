@@ -18,4 +18,4 @@ function emailValidationType1(emailId) {
 
 let emailIdsArrayType1 = new Array("abc@bridgelabz.co", "abc@bridge.co");
 
-console.log(emailValidationType1(emailIdsArrayType1)); // UC1 This email id is corrrect -> [ abc@bridgelabz.co ]
+console.log(emailValidationType1(emailIdsArrayType1)); // UC1 and UC2 This email id is corrrect -> [ abc@bridgelabz.co ]
