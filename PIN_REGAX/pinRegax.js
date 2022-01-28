@@ -17,6 +17,7 @@ function pinValidationType1(pinCode) {
 }
 /**
  * @purpose -> UC2 : Restrict the PIN code from taking alphabets or special characters at the beginning.
+ *          -> UC3 : Restrict the PIN code from taking alphabets or special characters at the End.
  * @param {*} pinCode 
  * @returns 
  */
